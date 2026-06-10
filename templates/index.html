@@ -676,7 +676,7 @@
             </div>
             
             <!-- System Stats Section -->
-            <section class="sidebar-section">
+            <section class="sidebar-section" style="display: none;">
                 <div class="sidebar-section-title">
                     <span>Diagnostics</span>
                 </div>
@@ -697,7 +697,7 @@
             </section>
             
             <!-- Quick-Start Prompts Section -->
-            <section class="sidebar-section">
+            <section class="sidebar-section" style="flex-grow: 1;">
                 <div class="sidebar-section-title">
                     <span>Quick-Start Prompts</span>
                 </div>
@@ -724,7 +724,7 @@
             </section>
             
             <!-- Document List Section -->
-            <section class="sidebar-section" style="flex-grow: 1;">
+            <section class="sidebar-section" style="display: none;">
                 <div class="sidebar-section-title">
                     <span>Knowledge Base Files</span>
                 </div>
@@ -1001,72 +1001,6 @@
             // Format answer with bullet points if structured as markdown list
             const formattedAnswer = formatResponseText(data.answer);
             bubble.appendChild(formattedAnswer);
-            
-            // Generate Metadata Pill Bar
-            const metaBar = document.createElement('div');
-            metaBar.className = 'msg-meta-bar';
-            
-            // Category Pill
-            const catPill = document.createElement('span');
-            catPill.className = 'meta-pill type';
-            catPill.textContent = `Type: ${data.query_type}`;
-            metaBar.appendChild(catPill);
-            
-            // Tool Pill
-            const toolPill = document.createElement('span');
-            toolPill.className = 'meta-pill tool';
-            toolPill.textContent = `Tool: ${data.selected_tool}`;
-            metaBar.appendChild(toolPill);
-            
-            // Confidence Pill
-            const confPill = document.createElement('span');
-            const confClass = `conf-${data.confidence.toLowerCase()}`;
-            confPill.className = `meta-pill ${confClass}`;
-            confPill.textContent = `Confidence: ${data.confidence}`;
-            metaBar.appendChild(confPill);
-            
-            // Latency Pill
-            const latPill = document.createElement('span');
-            latPill.className = 'meta-pill latency';
-            latPill.textContent = `${(data.latency_seconds * 1000).toFixed(1)} ms`;
-            metaBar.appendChild(latPill);
-            
-            bubble.appendChild(metaBar);
-
-            // Add Expander for retrieved chunks (only for document lookup tool)
-            if (data.selected_tool === 'document_lookup_tool' && data.retrieved_context && data.retrieved_context.length > 0) {
-                const expander = document.createElement('div');
-                expander.className = 'retrieved-context-expander';
-                
-                const expHeader = document.createElement('div');
-                expHeader.className = 'expander-header';
-                expHeader.onclick = () => toggleExpander(expHeader);
-                expHeader.innerHTML = `<span>View Retrieved Context Chunks (${data.retrieved_context.length})</span> <span class="arrow">▼</span>`;
-                
-                const expContent = document.createElement('div');
-                expContent.className = 'expander-content';
-                
-                data.retrieved_context.forEach(chunk => {
-                    const chunkDiv = document.createElement('div');
-                    chunkDiv.className = 'retrieved-chunk-item';
-                    
-                    const chunkMeta = document.createElement('div');
-                    chunkMeta.className = 'chunk-meta';
-                    chunkMeta.innerHTML = `<span class="chunk-doc">${chunk.document_name}</span> <span class="chunk-score">Score: ${chunk.relevance_score.toFixed(3)}</span>`;
-                    
-                    const chunkText = document.createElement('div');
-                    chunkText.className = 'chunk-text';
-                    chunkText.textContent = chunk.chunk_text;
-                    
-                    chunkDiv.appendChild(chunkMeta);
-                    chunkDiv.appendChild(chunkText);
-                    expContent.appendChild(chunkDiv);
-                });
-                
-                expander.appendChild(expHeader);
-                expander.appendChild(expContent);
-                bubble.appendChild(expander);
-            }
             
             row.appendChild(bubble);
             chatFeed.appendChild(row);
