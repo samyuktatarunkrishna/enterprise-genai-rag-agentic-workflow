@@ -1,0 +1,150 @@
+================================================================================
+          ENTERPRISE GENAI RAG & AGENTIC WORKFLOW SYSTEM INITIALIZATION
+================================================================================
+[1/5] Ingesting documents from data/sample_documents/...
+      Successfully loaded 5 document files.
+      - compliance_guidelines.txt (1995 characters)
+      - hr_policy.txt (2055 characters)
+      - it_support_faq.txt (2105 characters)
+      - product_knowledge.txt (2064 characters)
+      - sales_process.txt (1906 characters)
+
+[2/5] Chunking documents (Size={CHUNK_SIZE}, Overlap={CHUNK_OVERLAP})...
+      Generated 30 overlapping text chunks.
+
+[3/5] Building TF-IDF Vector Embeddings...
+      Vocabulary size: 562 words.
+
+[4/5] Indexing chunks in local InMemoryVectorStore...
+      Index populated successfully.
+
+[5/5] Initializing agent workflow components...
+      Agent workflow components ready.
+================================================================================
+
+================================================================================
+                      RUNNING SAMPLE WORKFLOW DEMO QUERIES
+================================================================================
+
+[DEMO QUERY 1]: "How can an employee request remote work?"
+  └─ Stage 1 (Handling): Cleaned Query, classified type as 'policy'
+  └─ Stage 2 (Retrieval): Retracted 3 relevant chunks above threshold
+  └─ Stage 3 (Routing): Routed to 'document_lookup_tool'
+  └─ Stage 4 (Response): Generated with 'High' confidence in 0.0016s
+  └─ Cited Documents: hr_policy.txt, compliance_guidelines.txt
+
+  [Final Generated Answer]:
+      Based on the retrieved enterprise documentation, here is what we found:
+      
+      - Remote Work and Flexible Schedules
+      Our organization supports a hybrid remote work model. To request leave, employees must submit a request through the HR Portal at least two weeks in advance. (Source: hr_policy.txt)
+      - Employees can request remote work by submitting a formal proposal to their direct manager and local HR lead. Remote employees are expected to maintain core working hours from 10:00 AM to 4:00 PM local time to support team collaboration. (Source: hr_policy.txt)
+      - employee training compliance. (Source: compliance_guidelines.txt)
+      
+      [References: compliance_guidelines.txt, hr_policy.txt]
+--------------------------------------------------------------------------------
+
+[DEMO QUERY 2]: "What should I do if I cannot access VPN?"
+  └─ Stage 1 (Handling): Cleaned Query, classified type as 'IT support'
+  └─ Stage 2 (Retrieval): Retracted 3 relevant chunks above threshold
+  └─ Stage 3 (Routing): Routed to 'document_lookup_tool'
+  └─ Stage 4 (Response): Generated with 'Medium' confidence in 0.0012s
+  └─ Cited Documents: it_support_faq.txt
+
+  [Final Generated Answer]:
+      Based on the retrieved enterprise documentation, here is what we found:
+      
+      - If you cannot access the self-service portal, contact the IT Service Desk directly. VPN Access and Remote Connection
+      To connect to the corporate network remotely, you must use the secure GlobalConnect VPN client installed on your company-issued laptop. (Source: it_support_faq.txt)
+      - If you experience connection drops, verify that your local Wi-Fi is stable, restart the VPN client, or clear the VPN configuration cache in settings. nnect VPN client installed on your company-issued laptop. (Source: it_support_faq.txt)
+      - System Access and Software Requests
+      Access to specialized systems (like Salesforce, AWS, or production databases) must be requested through the Access Management Tool (AMT). All access requests require manager approval and, in some cases, approval from the respective system owner. (Source: it_support_faq.txt)
+      
+      [References: it_support_faq.txt]
+--------------------------------------------------------------------------------
+
+[DEMO QUERY 3]: "What are the sales pipeline stages?"
+  └─ Stage 1 (Handling): Cleaned Query, classified type as 'sales'
+  └─ Stage 2 (Retrieval): Retracted 3 relevant chunks above threshold
+  └─ Stage 3 (Routing): Routed to 'document_lookup_tool'
+  └─ Stage 4 (Response): Generated with 'High' confidence in 0.0018s
+  └─ Cited Documents: sales_process.txt
+
+  [Final Generated Answer]:
+      Based on the retrieved enterprise documentation, here is what we found:
+      
+      - Sales Pipeline Stages
+      The sales pipeline consists of five distinct stages:
+      Stage 1: Discovery (initial contact and requirements gathering)
+      Stage 2: Solution Design Any changes in close dates, deal values, or pipeline stages must be documented with notes explaining the status. (Source: sales_process.txt)
+      - CRM Updates and Pipeline Integrity
+      Maintaining an accurate sales pipeline is crucial for quarterly forecasting. Sales representatives must update their opportunities in the CRM at the end of each business day. (Source: sales_process.txt)
+      - =========================================
+      ENTERPRISE SALES PLAYBOOK AND PROCESSES
+      =========================================
+      
+      1. Sales representatives use the BANT framework (Budget, Authority, Need, and Timeline) to qualify prospects. (Source: sales_process.txt)
+      
+      [References: sales_process.txt]
+--------------------------------------------------------------------------------
+
+[DEMO QUERY 4]: "Show metadata statistics."
+  └─ Stage 1 (Handling): Cleaned Query, classified type as 'metadata'
+  └─ Stage 2 (Retrieval): Retracted 0 relevant chunks above threshold
+  └─ Stage 3 (Routing): Routed to 'metadata_statistics_tool'
+  └─ Stage 4 (Response): Generated with 'High' confidence in 0.0014s
+
+  [Final Generated Answer]:
+      Based on the system diagnostics tool (metadata_statistics_tool):
+      - Total Available Documents: 5 (compliance_guidelines.txt, hr_policy.txt, it_support_faq.txt, product_knowledge.txt, sales_process.txt)
+      - Total Ingested Text Chunks: 30
+      - Average Chunk Length: 403.83 characters
+      
+      [References: System Metadata Service]
+--------------------------------------------------------------------------------
+
+[DEMO QUERY 5]: "What support options are available for customers?"
+  └─ Stage 1 (Handling): Cleaned Query, classified type as 'product'
+  └─ Stage 2 (Retrieval): Retracted 3 relevant chunks above threshold
+  └─ Stage 3 (Routing): Routed to 'document_lookup_tool'
+  └─ Stage 4 (Response): Generated with 'Medium' confidence in 0.0016s
+  └─ Cited Documents: product_knowledge.txt, hr_policy.txt
+
+  [Final Generated Answer]:
+      Based on the retrieved enterprise documentation, here is what we found:
+      
+      - Customer Support Options
+      Support levels vary by subscription tier, but all customers can access our online Documentation Hub and Community Forums. Professional and Business tier customers have access to email and chat support during (Source: product_knowledge.txt)
+      - ssional and Business tier customers have access to email and chat support during standard business hours. Enterprise tier customers receive a dedicated Technical Account Manager (TAM) and a 1-hour SLA response time for critical issues. (Source: product_knowledge.txt)
+      - ork and Flexible Schedules
+      Our organization supports a hybrid remote work model. (Source: hr_policy.txt)
+      
+      [References: hr_policy.txt, product_knowledge.txt]
+--------------------------------------------------------------------------------
+
+================================================================================
+                      AGENTIC RAG SYSTEM EVALUATION RUN
+================================================================================
+Query                                              | Type       | Rel Score | Halluc Risk | Latency 
+-------------------------------------------------------------------------------------------------
+How can an employee request remote work?           | policy     | 0.67      | False       | 0.0015  s
+What should I do if I cannot access VPN?           | IT support | 1.00      | False       | 0.0012  s
+What are the sales pipeline stages?                | sales      | 1.00      | False       | 0.0014  s
+Which product tier is suitable for enterprise c... | product    | 1.00      | False       | 0.0028  s
+What are the data privacy requirements?            | compliance | 1.00      | False       | 0.0010  s
+How many documents are available?                  | metadata   | 1.00      | False       | 0.0006  s
+Show metadata statistics.                          | metadata   | 1.00      | False       | 0.0006  s
+What is the process for password reset?            | IT support | 0.50      | False       | 0.0011  s
+When should compliance issues be escalated?        | compliance | 0.67      | False       | 0.0015  s
+What support options are available for customers?  | product    | 0.67      | False       | 0.0011  s
+=================================================================================================
+                               EVALUATION METRICS SUMMARY
+=================================================================================================
+Total Predefined Queries Evaluated  : 10
+Average Retrieval Relevance Score   : 85.00%
+Measured Hallucination Rate         : 0.00%
+Average System Latency              : 0.0013 seconds
+Average Response Formatting Quality : 100.00%
+=================================================================================================
+
+[Success] Execution complete. Log output written to: outputs/sample_run_output.txt
