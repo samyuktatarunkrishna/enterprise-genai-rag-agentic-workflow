@@ -1,7 +1,7 @@
 ---
 title: Enterprise GenAI RAG and Agentic Workflow System
 emoji: 🤖
-colorFrom: violet
+colorFrom: purple
 colorTo: indigo
 sdk: docker
 app_port: 7860
