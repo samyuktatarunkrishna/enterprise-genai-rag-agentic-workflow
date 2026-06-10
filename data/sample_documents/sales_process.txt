@@ -1,0 +1,20 @@
+=========================================
+ENTERPRISE SALES PLAYBOOK AND PROCESSES
+=========================================
+
+1. Lead Qualification Framework
+All incoming marketing qualified leads (MQLs) must be reviewed within 24 hours. Sales representatives use the BANT framework (Budget, Authority, Need, and Timeline) to qualify prospects. A lead becomes a Sales Qualified Lead (SQL) if they satisfy at least three out of four BANT criteria. SQLs must be immediately logged in the CRM with contact details, company size, and specific pain points.
+
+2. CRM Updates and Pipeline Integrity
+Maintaining an accurate sales pipeline is crucial for quarterly forecasting. Sales representatives must update their opportunities in the CRM at the end of each business day. Any changes in close dates, deal values, or pipeline stages must be documented with notes explaining the status. Inactive opportunities with no updates for 30 consecutive days will be flagged for review by the regional sales director.
+
+3. Sales Pipeline Stages
+The sales pipeline consists of five distinct stages:
+Stage 1: Discovery (initial contact and requirements gathering)
+Stage 2: Solution Design (tailoring product demonstrations and architecture proposals)
+Stage 3: Proposal Delivery (pricing discussions and contract draft submission)
+Stage 4: Negotiation (handling legal reviews, redlines, and final pricing)
+Stage 5: Closed Won / Closed Lost (completing sign-offs or documenting reasons for loss)
+
+4. Approval Steps and Deal Sign-Offs
+Any deals offering discounts above 15% must go through the standard pricing approval workflow. Discounts up to 25% require approval from the Sales Director. Discounts exceeding 25% require Chief Revenue Officer (CRO) approval. All final contract agreements must be submitted to the Legal Team for standard review and require signature approval from an authorized corporate officer via DocuSign.

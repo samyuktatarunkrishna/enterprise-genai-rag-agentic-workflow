@@ -1,0 +1,18 @@
+=========================================
+CORPORATE COMPLIANCE & SECURITY GUIDELINES
+=========================================
+
+1. Data Privacy and Protection Policy
+Our organization is committed to protecting customer data in compliance with GDPR, CCPA, and other global data privacy regulations. Personally Identifiable Information (PII) must be encrypted at rest and in transit. Employees are strictly prohibited from storing customer PII on local drives or unapproved personal cloud accounts. Any potential data exposure or leak must be reported to the Data Protection Officer (DPO) immediately.
+
+2. Approved Software and Tools Usage
+Employees must only use software and communication tools that are officially approved by the IT Security team. The approved list includes corporate email, Slack, Google Workspace, and Microsoft Teams. Third-party cloud storage, personal email, and unauthorized AI tools (including public generative AI platforms not approved for corporate data) are strictly forbidden for handling company or client materials.
+
+3. Incident Escalation Process
+Compliance and security issues must be escalated promptly using the standard workflow:
+- Level 1 Escalation: Notify the immediate team manager and file an incident ticket.
+- Level 2 Escalation: If unresolved within 24 hours or if it involves a security breach, escalate directly to the Security Operations Center (SOC) team.
+- Level 3 Escalation: For regulatory violations or critical data leaks, notify the Chief Information Security Officer (CISO) and Legal Counsel.
+
+4. Audit Requirements and Compliance Reviews
+To ensure ongoing compliance, all departments are subject to regular internal and external audits. Audit reviews occur semi-annually and verify system access logs, vendor security assessments, data deletion certificates, and employee training compliance. Managers are responsible for maintaining complete, up-to-date documentation of operational procedures and providing them to auditors on request.

@@ -1,0 +1,15 @@
+=========================================
+IT SUPPORT FAQ AND HELP DESK GUIDE
+=========================================
+
+1. Password Reset Process
+If you are locked out of your account or need to reset your password, please use the self-service reset portal at reset.enterprise.com. You will need to verify your identity via multi-factor authentication (MFA) on your registered mobile device. If you cannot access the self-service portal, contact the IT Service Desk directly. Passwords must be at least 14 characters, containing uppercase, lowercase, numbers, and special characters. Passwords expire every 90 days.
+
+2. VPN Access and Remote Connection
+To connect to the corporate network remotely, you must use the secure GlobalConnect VPN client installed on your company-issued laptop. Open the GlobalConnect application, select your nearest regional gateway, and enter your credentials. A push notification will be sent to your Authenticator App for approval. If you experience connection drops, verify that your local Wi-Fi is stable, restart the VPN client, or clear the VPN configuration cache in settings.
+
+3. Laptop Issues and Hardware Troubleshooting
+If your company-issued laptop suffers from hardware failures, blue screens, or performance issues, run the built-in diagnostic tools first. If the problem persists, submit an IT incident ticket via the Service Portal. For urgent issues, you can schedule an appointment with the Tech Bar at your local office. Do not attempt to repair hardware yourself or open the laptop casing, as this voids the manufacturer's warranty and violates IT policy.
+
+4. System Access and Software Requests
+Access to specialized systems (like Salesforce, AWS, or production databases) must be requested through the Access Management Tool (AMT). All access requests require manager approval and, in some cases, approval from the respective system owner. Temporary access requests are automatically revoked after 30 days unless an extension is requested and approved. For standard software installations, use the Enterprise Software Center application on your laptop.
