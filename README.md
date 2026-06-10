@@ -1,12 +1,3 @@
----
-title: Enterprise GenAI RAG and Agentic Workflow System
-emoji: 🤖
-colorFrom: purple
-colorTo: indigo
-sdk: docker
-app_port: 7860
----
-
 # Enterprise GenAI RAG and Agentic Workflow System
 
 ### 🌐 [Live Interactive Demo](https://huggingface.co/spaces/samyuktatarunkrishna/enterprise-genai-rag-agentic-workflow)
