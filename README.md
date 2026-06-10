@@ -1,5 +1,10 @@
 # Enterprise GenAI RAG and Agentic Workflow System
 
+### 🌐 [Live Interactive Demo](https://huggingface.co/spaces/samyuktatarunkrishna/enterprise-genai-rag-agentic-workflow)
+*Interact with the AI Agent live in your browser: [huggingface.co/spaces/samyuktatarunkrishna/enterprise-genai-rag-agentic-workflow](https://huggingface.co/spaces/samyuktatarunkrishna/enterprise-genai-rag-agentic-workflow)*
+
+---
+
 This is a portfolio-ready implementation of an enterprise-style Retrieval-Augmented Generation (RAG) system with a LangGraph-inspired agentic workflow. It operates completely locally, utilizing lightweight, open-source Python libraries to demonstrate ingestion, chunking, vector retrieval, MCP-like diagnostic tools, structured orchestration, and automated evaluation metrics.
 
 > [!NOTE]  
@@ -187,6 +192,16 @@ Below is a summary of the system performance logged during execution:
 
   [References: System Metadata Service]
   ```
+
+---
+
+## Cloud Deployment (Hugging Face Spaces)
+This project is pre-configured with a `Dockerfile` and dynamic port mappings, making it ready for instant, free deployment to Hugging Face Spaces:
+1. Go to [huggingface.co/new-space](https://huggingface.co/new-space).
+2. Set the Space name to `enterprise-genai-rag-agentic-workflow`.
+3. Choose the **Docker** SDK (with a blank template) and the **Free CPU Basic** hardware tier.
+4. Push your code directly to the Hugging Face Git remote, or link your GitHub repository for continuous integration.
+Hugging Face will automatically compile the Dockerfile and host the interactive dark-mode dashboard.
 
 ---
 

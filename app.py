@@ -205,7 +205,8 @@ def main():
     webbrowser.open("http://127.0.0.1:8000")
     
     # Start web server
-    flask_app.run(host="127.0.0.1", port=8000, debug=False)
+    port = int(os.environ.get("PORT", 8000))
+    flask_app.run(host="0.0.0.0", port=port, debug=False)
 
 if __name__ == "__main__":
     main()
