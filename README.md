@@ -196,13 +196,3 @@ Below is a summary of the system performance logged during execution:
 - **GCP/Vertex AI Migration**: Swap the local memory store with **Vertex AI Vector Search** and load source files to **Google Cloud Storage** with Cloud Functions for automatic indexing.
 
 ---
-
-## CV / Resume Project Summary
-You can copy and paste the following bullet points for your resume or portfolio site:
-
-- **Built a RAG-based GenAI application** using Python, vector-style retrieval, and LLM orchestration across structured and unstructured documents.
-- **Implemented ingestion, chunking, embeddings, vector indexing, semantic retrieval, and controlled response generation** across many text chunks.
-- **Designed a LangGraph-inspired agentic workflow** with 4 stages: query handling, retrieval, tool routing, and controlled response generation.
-- **Integrated MCP-style tool access** with 2 external-style utilities to support context-aware responses.
-- **Evaluated test queries** for retrieval relevance, hallucination risk, latency, and prompt quality.
-- **Improved answer relevance** through chunking, prompt, and retrieval tuning.
